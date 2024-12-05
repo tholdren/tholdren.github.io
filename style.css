@@ -4,14 +4,16 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    cursor: none; /* Hide the default cursor */
+    cursor: none;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding-right: 20em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    text-align: right;
 }
 
 header h1 {
@@ -33,7 +35,8 @@ section {
 }
 
 #about {
-    background-color: #fff;
+    justify-content: center;
+    text-align: center;
 }
 
 #projects {
@@ -56,6 +59,24 @@ footer a {
     text-decoration: none;
 }
 
-div {
-    transition: transform 0.1s ease; /* Smooth transition for cursor movement */
+/* Base styles */
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 50%; /* Circular shape */
+    pointer-events: none; /* Prevent interference with interactions */
+    z-index: 9999; /* Ensure it's above all elements */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Enlarged cursor effect on hover */
+.cursor-hover {
+    transform: scale(2); /* Increase size */
+    background-color: rgba(52, 152, 219, 0.3); /* Semi-transparent */
 }
